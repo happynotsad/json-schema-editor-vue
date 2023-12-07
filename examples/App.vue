@@ -10,8 +10,10 @@
       </div>
     </div>
     <div class="container">
-      <codemirror class="code" v-model="jsonStr" :readOnly="false"/>
       <json-schema-editor class="schema" :value="tree" disabledType lang="zh_CN" custom/>
+    </div>
+    <div class="container">
+      <codemirror class="code" v-model="jsonStr" :readOnly="false"/>
     </div>
     <a-modal v-model="visible" title="import json" width="800px" height="600x" @ok="handleImportJson">
       <div class="code-container">
@@ -111,7 +113,7 @@ export default {
 .container{
   display: flex;
   padding:20px;
-  width:80vw;
+  /* width:80vw; */
   min-width:800px;
   justify-content:center;
   height: calc(100vh - 150px);
@@ -123,7 +125,7 @@ export default {
 }
 .schema{
   margin-left: 20px;
-  width:50%;
+  width:100%;
   height: 100%;
   overflow-y: auto;
   overflow-x:hidden;

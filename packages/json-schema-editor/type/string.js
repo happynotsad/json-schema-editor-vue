@@ -31,7 +31,11 @@ const attr = {
     enum:{
         name:'枚举',
         type:'array'
-    }
+    },
+    mock:{
+        name:'正常Mock',
+        type:'array'
+    },
 }
 const wrapper = {value, attr}
 export default wrapper
